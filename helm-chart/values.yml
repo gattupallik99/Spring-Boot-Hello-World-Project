@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: YOUR_DOCKER_USERNAME/spring-boot-hello-world
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 80
+
+ingress:
+  enabled: false
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
